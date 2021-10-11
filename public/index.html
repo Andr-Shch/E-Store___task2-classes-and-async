@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>///</title>
+    <link rel="shortcut icon"
+        href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAADe3t49PT3Hx8dAQEDh4eFMTEy/v781NTX5+fns7Oz29vbw8PB5eXnp6elubm4tLS25ubkmJiYXFxfS0tJ0dHRbW1tFRUWXl5fMzMyxsbFISEiqqqqdnZ2CgoILCwshISGIiIhmZmYSEhKioqKHh4ccHBxUVFRgYGD8whtVAAAJqUlEQVR4nO1daXuyOhBVpCqyowiouFVr+///4K1vmwWEhIQslJvzrX0gzJGQmcyWycTAwMDAwMDAwMDAwMDAwMDAwMDAQBpcK7WXqmGnlquCnLcsgihb5DNHNWb5IouCYulJ5bd/z+PbVCducf6+l0XPu8ZnrewAzuuTL4FfeNJNrIIgFMzPLTe6OdXwKIWuO7tMN6EGZDth/LxyGN9fHedyJYage9VNpRWFkJkaBq8jb+LZYaEWh1ncsBSIWHDCbW3QOEhSy7LmqvH9zDQJYuEU3dob3O5cuUYFGZ67q/3ifVWjV/0GAxmalhW1H73ot9yU+FifSizfDgg/cbF6GXE2NtC6FCWgAJRrbNnroRddTNEfbHHyCcDyDYn2xT+37tgMTQWKJwK7BRKOe3bNkQLKh0bwmyJ6iw9elYHWrHhYU/QHNtKNJ74RfDQN7mJlE4QjEpBPR3/A+xeCRRMF9Cleue5HC/JQ9GAdLlJlPLfv4ZYpEC2ZMEAL7syj9t/hDzQEU60Z6CW+s9/s5cN/hdhLPLCvNUu4Fg9PFSLseuizAvhFnaGuM0+44D3cCuZ7oboPdO4HafCQmMz3RuDWRIJg4pAAMSPWO9G2Ysif4WSSAjEz1hXfAvbCeeAMgdb+tFjvPIBFivVOtbDAUnNgfRNwbzIbOEPnV8431p2+PQN3DpwhfBOsCtEwHAoGxNBNk/J+LJ443sskFWTOD4Th7hhEWR4/bj9L+/n2iPMsCo4CwmMDYOiX24XTHF7dOItt2fNdame4zC7k2OP5ki37PEAvQ/ejjVcNV/7ti0aGHlNqwynk3MFoY+hZrIHjq8XFURfDeXFhJDidXoo5x5P0MFwlX8z8nsj27K9RC8P5qR6K7op1wPwadTC0P1vkd76AZ2ybtf0GC1Y5NTA8rhsEXweJFbo+cG+6fhhaSdB45ZHtceoZ1jM3ns/e+7+h9tXvf8Cf/n72evmW6XmqGfr17LDz4Y4lEtQY/vvX/VA3epg8LooZzt+rsq6/qhZZA8NvLL9q0/WdIeCplqFVJXjZ1i3OZoaTSbK9VCkyPFMlw3lUFfM1HNTG8Jl8XLk36qw1VDL0K4uMc2yYau0MJ+HRwW/fdv0WFTL0KgSjxuetflg4jVlMdmUKbDtmOilkWEnFurasFfaTotOytQ8rxnrH5AN1DBNMuEt7ZqsbhmHrZnBVXrBRum2MlTGcY7I9+FNT7AcaZt1JZ6hiiALGPcMAFmawHrp8iqoYYtv5dT/PlYVp/48u16thuEQrvdM3VJViY3UQWg1DN2ISigKUQDCN6FpRDcMSrg8XESVJezjcg550qIShhba8PTOSf+AVcDx62FMFwxXKQt2KSdsI0ay/034yFQznUFPkosp0UOpoTjPBVTDcwx+c0QFBAJqntA9bAcMQLn2RoCqkb3hwM0WzbBQwhAZp3CvCUsMSKn5KOo8ChjCLVWyCH9yLUbJ35TOcA0keYqPhFgw5ktca+Qzhno4564oCqDHICc7yGcLKbp6wCglwcmyIl0lnCNPKcsbx6YA6kSiAdIZwkopcSH8AF2li5qh0htCeEacLAYBjbnogXSWboQe2AZxFK0QA39aD9OvJZpiAhUZGiibI4b6RlL5shsB7cRPd4eCJEExT0gSRzRBEs79klGTAQNYX4SLZDIHJRt3G8WAFKrdIhptkhiEYXlz/hooMQATCNyCZIawAbFlofDuxafOXcA0wJ0juLckMgRe+2QnsBXm8jnNivQbxGuAevhAcUpIZgrqarMkoDcHugFDDSr5m/uviuhGcB7IZ/obgmzxQPuq2dGubqZRr3N9N4plgt0lmCKzSps4NeDixbXNMucYH6pawgZLMEErw+hm5WL389K35JdKu8eEv2C6CZIbAcixeGS7xrKeW0jnaNdA1THCQKGJ4bEg9wDNI1s2WJe0aqPL1MxzvOyR8hz7+jeXNKpF2zQC+w/GvpSR9uLpA4S9tdjnlmgHoQ2DTfMq1aTb6bJrx26U7EHOXvLcgbM5Gsj8kBF7Hscf/JFykyk/DXEjdBT7IDyD1vFDlazuP1tc2fn/pCvi8ZfQ/ARaPVp/3BFTtczZqIsEDQxOjwOpiT+K7Z8AcD72xJxg/JAaIuDCQ+OGkY7idHRYY+EG+TF0cn6NRExEwo4bcWkc+Q6i0NmIVRgodjWRVqyCfBq6mbBVZNMBUDO35NP+DnCiU1/YuTif6sMzW0Z/XhlVasLfbagPKTaTp2T+aX2rDIQ9DyC/FuilHYrYYISpkoyZ6K8/zFvEpYnne2SDyvPHk+o2IXP0SqsIHfTg1DLHKQ6e/BZ6gkpIOVYiKamZ2qCS7d8dhG4VrZh1WLlV1T1iblkvPuqcLGqpL61xVDFdYc+11n7eIvUGiiw1CWf2hi0l25m9Pj7fxjzv57/TUkD7a3afkGtI7VmA5tBrSSgnidHpqMUV+6oBbZJlXh+j2WJXV6pVS54yjlrvScaKr805pPX6FolM07IgJ9fhWUanH73xUiNKeCmG1p8LhtaKb0FOh2tSmu4GrtS/GI6obOH+9L0ZlU/AP9W5zHXubsGxRVPen8aoT9Vs3OidM3AaG4cmp96eJWDYo6nsMNRx/xdZj6MyW9q+hT1TZ1OSqe5+omNEg0tHrK207Z8/J6L2+Mlavq5Z+bf5H08vpgvjKHEvW03PPW9YXnE44R0v2dABdfRPD0mnj0Qqn5PFjaet9ueLofcmVz2H6l7ZDaQ/ajz/Zg/ZXgIByhvA5Dvo9QDfD8feC/sG4+3kDjLsnu0QYhu0YP0PYBMcZOEPuM0r+zDkzYB/DfM7M+M8KGv95T+M/s+vPnbvG3rdi/GfnobNo5RRTiEGf8w9XklLyxAKdYcnhIUDepL9wDilPm6q/dZYs14qPvLaiM5xFAXbLmsZc9yNvWaesCA3oe6bz+M/lxpIP1uJbefUHyiPmblM1Rw4kYamj4oCanJLqcCnAEniYD4CRDfuAhONPUcKPHJkNa6Iusdhqny5VuwsaZy0ujbs/CiyAt+61v0MtdJ9KYyg2eFjJTemXtbsq8LG6J/LIhFvNFejbYduvRZC2O1fnftFz7Vr0tf+PHtZPcIqDJLW0IE2ToJ4AsBVgUTbFATfxTD3ihvhOWxIkG7zideSBQEj1w5Pinje5Qi7ivbhGB7u2HBmdYM69IcItm4Oc+rApRWvnOUvigXyIWWJq8K6UmLwqnGNRK8wrkugQ3+giSMQtPkRy9wAruwiibJFr0If5IouCwpbRKOYFrpXa6pFaQ7H8DQwMDAwMDAwMDAwMDAwMDAwMDEaJ/wBau6cC3nUbZQAAAABJRU5ErkJggg=='>
+    <link rel="stylesheet" href="style.css">
+    <title>SOCKET</title>
 </head>
+
 <body>
-    <div class="root"></div>
-    <script src="../src/App.js"></script>
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo__img" src="./images/power_socket_PNG19334.png" alt="logo" />
+            <h1 class="header__text">SOCKET</h1>
+        </div>
+        <div class="header__info">
+            <img class="header__info__user-image" src="./images/Daco_4287793.png" alt="" srcset="">
+            <div class="header__info__basket-image">
+                <div class="item">0</div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="card">
+            <div class="card__image">
+                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
+            </div>
+            <div class="card__title">
+                Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+            </div>
+            <div class="card__category">
+                Category: men's clothing"
+            </div>
+            <div class="card__rating"><span class="stars-container stars-0">★★★★★</span></div>
+            <div class="card__bay">
+                <div class="card__bay__price">180$</div>
+                <button  class="card__bay__btncart" id="search-button">
+                   <img src="./images/cart2.svg"/>
+                 </button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/public/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,143 @@
+@import url('http://fonts.cdnfonts.com/css/nexa-rust-extras');
+@import url('http://fonts.cdnfonts.com/css/overpass-mono');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass Mono', sans-serif;
+}
+
+.header{
+    display: flex;
+    background: rgb(19, 18, 18);
+    justify-content: space-between;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+ 
+}
+.header__logo__img{
+    height: 60px;
+    width: 60px;
+    margin-left: 30px;
+}
+.header__text{
+    font-family: 'Nexa Rust Sans', sans-serif;
+    color: rgb(247, 245, 243);
+    margin-left: 10px;
+    cursor: pointer;
+}
+ .header__info__user-image{
+     filter: contrast(0%);
+     height: 35px;
+     width: 35px;
+ }
+ .header__info__user-image:hover{
+    opacity: 0.5;
+    cursor: pointer;
+ }
+ .header__info{
+     display: flex;
+     align-items: center;
+ }
+.header__info__basket-image{
+    display: flex;
+    margin: 0 30px;
+    justify-content: end;
+    height: 35px;
+    width: 35px;
+    background: url("https://res.cloudinary.com/dviuglhwb/image/upload/v1489676297/cart_t8m4la.svg") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+    
+}
+.header__info__basket-image:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.item{
+    background-color: rgb(11, 150, 11);
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    color: white;
+    text-align: center;
+    display:none
+}
+.main{
+    width: calc(100% - 200px);
+    background: rgba(210, 105, 30, 0.247);
+    margin: 0 auto;
+   
+}
+/*Product card style / Start*/
+.card{
+    width: 230px;
+    background: rgb(250, 249, 249);
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(189, 186, 186, 0.671);
+    height: 500px;
+}
+
+.card__image img{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.card__title{
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px; 
+}
+.card__category{
+    
+    font-size: 12px;
+    font-weight: 500;
+}
+/*Rating Stars*/
+.stars-container {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+  }
+  
+  .stars-container:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    color: lightgray;
+  }
+  
+  .stars-container:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    color: gold;
+    overflow: hidden;
+    width: 50%;
+  }
+ /*END rating stars*/
+ .card__bay{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+    }
+
+  .card__bay__price{
+      color: green;
+      font-size: 15px;
+      font-weight: 700;
+      width: 60px;
+  }
+ 
+  .card__bay__btncart{
+    background: none;
+    border: none;
+  }
+  .card__bay__btncart:hover{
+      background: rgb(201, 196, 196);
+  }
+  
+  

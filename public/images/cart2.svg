@@ -1,0 +1,15 @@
+<svg width="33" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <ellipse ry="2.33945" rx="2.29358" id="svg_20" cy="27.43119" cx="7.05046" stroke="#000" fill="none"/>
+  <ellipse ry="2.43119" rx="2.61468" id="svg_21" cy="27.24771" cx="25.62844" stroke="#000" fill="none"/>
+  <line id="svg_23" y2="23.53211" x2="5.49083" y1="23.62385" x1="26.95872" stroke="#000" fill="none"/>
+  <line id="svg_24" y2="23.80734" x2="5.67431" y1="20.22936" x1="5.67431" stroke="#000" fill="none"/>
+  <line id="svg_25" y2="20.13761" x2="5.03211" y1="15.6422" x1="26.68349" stroke="#000" fill="none"/>
+  <line id="svg_26" y2="15.18349" x2="26.95872" y1="7.93578" x1="27.05046" stroke="#000" fill="none"/>
+  <line id="svg_27" y2="7.84404" x2="5.94954" y1="19.58716" x1="5.49083" stroke="#000" fill="none"/>
+  <line id="svg_28" y2="7.84404" x2="5.49083" y1="8.3945" x1="27.50917" stroke="#000" fill="none"/>
+  <line id="svg_29" y2="3.07339" x2="4.48165" y1="4.90826" x1="0.72018" stroke="#000" fill="none"/>
+  <line id="svg_30" y2="2.79817" x2="4.20642" y1="7.56881" x1="5.8578" stroke="#000" fill="none"/>
+ </g>
+</svg>
