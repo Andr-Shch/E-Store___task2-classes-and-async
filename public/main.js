@@ -1,17 +1,37 @@
-import {Card} from "./card.js"
+import Controler from "./card.js"
+import ErrorHendler from "./errorHendler.js"
+ 
+;
+const sorter = document.querySelector('.sorter')
+async function fetchAsync (url) {
+  document.getElementById("overlay").style.display = "block";
+  let response = await fetch(url);
+  let data = await response.json();
+
+  if (!data) {
+    throw new ErrorHendler("OOOOPS");
+  }
+  return data;
+} 
+
+try {
+   
+  let productList = await fetchAsync('https://fakestoreapi.com/products')
+  const App = new Controler(productList)
+  App.makeCards()
+  sorter.addEventListener('change', App.sortCards(e.target.value))
+
+
+} catch (error) {
+  if (error instanceof ErrorHendler){
+    alert(error.message)
+  }
+
+}
 
   
-  const main = document.querySelector('.main')
 
-  const card = new Card(
-      {
-  title: "Mens Casual Premium Slim Fit T-Shirts ",
-  price: 22.3,
-  category: "men's clothing",
-  image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-  rating: {
-          rate: 4.1,
-          }
-  })
+ 
+    
 
-  card.render(main)
+  
