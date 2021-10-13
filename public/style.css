@@ -65,6 +65,7 @@
 }
 .main{
     display: grid;
+    
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width: calc(100% - 200px);
     background: rgba(204, 190, 180, 0);
@@ -132,18 +133,22 @@
     font-weight: 500;
 }
 /*Rating Stars*/
+
 .stars-container {
     position: relative;
     display: inline-block;
     color: transparent;
+    font-size: 25px;
+    --percent:calc(var(--rating)*20%)
   }
-  
+   
   .stars-container:before {
     position: absolute;
     top: 0;
     left: 0;
     content: '★★★★★';
     color: lightgray;
+    
   }
   
   .stars-container:after {
@@ -153,7 +158,7 @@
     content: '★★★★★';
     color: gold;
     overflow: hidden;
-    width: 50%;
+    width: var(--percent);
   }
  /*END rating stars*/
  .card__bay{
@@ -173,9 +178,14 @@
   .card__bay__btncart{
     background: none;
     border: none;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    background-repeat: no-repeat;
+    background-image: url('./images/cart2.svg') ;
   }
   .card__bay__btncart:hover{
-      background: rgb(201, 196, 196);
+      background-color: rgb(201, 196, 196);
   }
   
   #overlay {

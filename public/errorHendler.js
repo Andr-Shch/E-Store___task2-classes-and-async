@@ -3,8 +3,15 @@ class ErrorHendler extends Error {
         super(message)
         this.name = "ErrorHendler"
     }
-    
-    
+
+    showError(action){
+       try {
+           action
+       } catch (error) {
+           alert(console.log(error.message))
+       }
+
+    }
 
 }
 

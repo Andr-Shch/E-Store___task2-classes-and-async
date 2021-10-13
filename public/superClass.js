@@ -3,8 +3,9 @@ class Model  {
        
         
     }
-    render(data){ 
-     
+    render(data, checked){ 
+     // 
+ 
         const main = document.querySelector('.main')
          const wrappe = document.createElement('div')
          wrappe.classList.add('card')
@@ -18,11 +19,12 @@ class Model  {
      <div class="card__category">
          Category: ${data.category}"
      </div>
-     <div class="card__rating"><span class="stars-container stars-0">★★★★★</span></div>
+     <div class="card__rating"><span style="--rating: ${data.rating.rate};" class="stars-container stars-0">★★★★★</span></div>
+     
      <div class="card__bay">
-         <div class="card__bay__price">${data.price}</div>
-         <button  class="card__bay__btncart" id="search-button">
-            <img src="./images/cart2.svg"/>
+         <div class="card__bay__price">${data.price}$</div>
+         <button ${checked?'style="background-image: url('+ './images/cartOK.svg'+')"':''} value="${data.id}"  class="card__bay__btncart" id="search-button">
+        
           </button>
          `
        main.appendChild(wrappe)
@@ -31,5 +33,5 @@ class Model  {
    
 }
 
-
+// <img src="./images/cart2.svg"/>``    
 export default Model
