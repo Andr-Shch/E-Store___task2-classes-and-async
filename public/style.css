@@ -10,6 +10,9 @@
     display: flex;
     background: rgb(19, 18, 18);
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 .header__logo{
     display: flex;
@@ -92,6 +95,7 @@
     width: 200px;
     height: 32px;
     padding-left: 5px;
+    margin-top: 80px;
 }
 
 .sorter:focus{
@@ -102,6 +106,7 @@
 
 /*Product card style / Start*/
 .card{
+    display: grid;
     width: 230px;
     background: rgb(250, 249, 249);
     padding: 15px;
@@ -119,7 +124,7 @@
 .card__image img{
     width: 200px;
     margin-bottom: 30px;
-    height: 260px;
+    height: 250px;
     object-fit:contain
 }
 .card__title{
@@ -187,7 +192,23 @@
   .card__bay__btncart:hover{
       background-color: rgb(201, 196, 196);
   }
-  
+  .card__edit{
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-image: url('./images/edit.svg') ;
+
+  }
+  .card__edit:hover{
+    background-color: rgb(201, 196, 196);
+  }
+  /*end of card*/
+
+
+
   #overlay {
     position: fixed;
     display: none;
@@ -211,3 +232,79 @@
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
   }  
+
+  .overlay-edit{
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+  .edit__wrapper{
+      color: rgb(255, 255, 255);
+      height: 400px;
+      width: 200px;
+     background-color: rgba(66, 64, 66, 0.87);
+     border-radius: 5px;
+     cursor:default;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+  }
+  .textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+ outline: 0;
+ border: 1px solid rgba(255, 255, 255, 0.4);
+ background-color: rgba(255, 255, 255, 0.397);
+ width: 200px;
+ border-radius: 3px;
+ padding: 10px 15px;
+ margin: 0 auto 10px auto;
+ display: block;
+ text-align: center;
+ font-size: 18px;
+ color: white;
+ transition-duration: 0.25s;
+ font-weight: 300;
+  }
+  #category{
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.363);
+    width: 200px;
+    border-radius: 3px;
+    margin: 20px 0;
+  }
+  #category option{
+      background-color:gray;
+  }
+  .edit__btn{
+  -webkit-appearance: none; 
+-moz-appearance: none;
+/* appearance: none; */
+ outline: 0;
+ background-color: white;
+ border: 0;
+ padding: 5px 15px;
+ color: #53e3a6;
+ border-radius: 3px;
+ margin-top: 30px;
+ cursor: pointer;
+ font-size: 18px;
+ transition-duration: 0.15s;
+ width: 100%;
+  }
+  .edit__btn:active{
+      width: 70%;
+  }

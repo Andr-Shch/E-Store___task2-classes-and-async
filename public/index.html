@@ -25,8 +25,26 @@
         </div>
     </header>
     <section>
-        <select class="sorter">
-           
+
+        <div class="overlay-edit" >
+            <div class="edit__wrapper">
+              
+                <label for="textarea">Edit title</label>
+                  <textarea  id="textarea"  class="edit__title textarea" rows="4" ></textarea>
+                  <label for="category">Change category</label>
+                  <select id="category" class="edit__category" required>
+                    <option  >Change category </option>
+                    <option value="men's clothing">men's clothing</option>
+                    <option value="women's clothing">women's clothing" </option>
+                    <option value="electronics">electronics</option>
+                    <option value="jewelery">jewelery</option>
+                </select>
+                <label for="Price">Change price:</label>
+                <input type="number"  id="Peice" class='edit__price textarea'  rows="1" >
+                 <button class="edit__btn">edit</button>
+            </div>
+       </div>
+            <select class="sorter">
                 <option disabled selected >Sort items </option>
                 <option value="rating">By rate</option>
                 <option value="expensive">Price:highest first </option>
@@ -36,14 +54,10 @@
            
                 <div id="text">Loading.....</div>
               </div>
-            </div>
+         
     </section>
     <main class="main">
-        <div id="overlay" >
-           
-            <div id="text">Loading.....</div>
-          </div>
-        </div>
+      
     </main>
 
     <script type="module" src="/public/main.js"></script>

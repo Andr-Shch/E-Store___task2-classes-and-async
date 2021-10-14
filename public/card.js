@@ -7,13 +7,58 @@ class Controler extends Model {
     this.data = data
     this.chosenItems = []
   }
+  
+ //find clicks on buttons what we need
+  clickObserver(target) {
+    switch (target.className) {
+      case 'card__bay__btncart':
+        return  this.addToCart(target)
+      case 'card__edit':
+        return   this.editItem(target)
+      default:
+        return
+    }
+  }
+
+ //edit card title and category
+  editItem(target){
+    document.querySelector('.overlay-edit').style.display='flex'
+    let title = document.querySelector('.edit__title')
+    let category= document.querySelector('.edit__category')
+    let price = document.querySelector('.edit__price')
+     
+    //open editor  with curent state
+    for (let card of this.data){
+       if(card.id==target.value){
+           title.value=card.title
+           category.value = card.category
+           price.value = card.price 
+       }
+     }
+ 
+    
+
+    document.querySelector('.edit__btn').onclick =  ()=>{
+      
+      this.data= this.data.map(el=>el.id==target.value?{...el, title:title.value, category:category.value, price:price.value}:el)   
+
+     
+      this.makeCards()
+      document.querySelector('.overlay-edit').style.display='none'
+    }
+  
+    console.log(this.data);
+    
+  }
+
 
   //render all cards from request  
   makeCards() {
     let checked = false  //lexical invoroment
+    document.querySelector('.main').innerHTML = ''
+
     for (let product of this.data) {
       this.chosenItems.includes(''+product.id)?checked = true:checked=false //check if selected to cart
-      console.log(typeof this.chosenItems[0]);
       super.render(product, checked)
       
     }
@@ -21,34 +66,11 @@ class Controler extends Model {
     document.getElementById("overlay").style.display = "none";
   }
 
-  //Sort products with delay 1sec.
-  sortCards(value) {
-    document.getElementById("overlay").style.display = "block";
-    setTimeout(() => {
-      document.querySelector('.main').innerHTML = '';
-      if (value === 'rating') {
-        this.data.sort((a, b) => b.rating.rate - a.rating.rate)
-        this.makeCards()
-      } else if (value === 'expensive') {
-        this.data.sort((a, b) => b.price - a.price)
-        this.makeCards()
-      } else if (value === 'cheap') {
-        this.data.sort((a, b) => a.price - b.price)
-        this.makeCards()
-      } else {
-        this.data.sort((a, b) => a.id - b.id)
-        this.makeCards()
-      }
-    }, 1000)
-  }
+ 
+  
   //add to cart 
   addToCart(target) {
     let cart = document.querySelector('.item')
-    
-    if (target.className != 'card__bay__btncart') {
-      return
-    }
-   
     target.style.backgroundImage='url(' + './images/cart2.svg'+')'
 
     //check if product in cart
@@ -65,6 +87,26 @@ class Controler extends Model {
      
   }
 
+   //Sort products with delay 1sec.
+  sortCards(value) {
+    document.getElementById("overlay").style.display = "block";
+    setTimeout(() => {
+      document.querySelector('.main').innerHTML = ''
+      if (value === 'rating') {
+        this.data.sort((a, b) => b.rating.rate - a.rating.rate)
+        this.makeCards()
+      } else if (value === 'expensive') {
+        this.data.sort((a, b) => b.price - a.price)
+        this.makeCards()
+      } else if (value === 'cheap') {
+        this.data.sort((a, b) => a.price - b.price)
+        this.makeCards()
+      } else {
+        this.data.sort((a, b) => a.id - b.id)
+        this.makeCards()
+      }
+    }, 1000)
+  }
 }
 
 export default Controler
