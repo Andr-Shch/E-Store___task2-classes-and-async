@@ -1,15 +1,15 @@
-class Model  {
-    constructor(){
-       
-        
+class Model {
+    constructor() {
+
+
     }
-    render(data, checked){ 
- 
+    render(data, checked) {
+
         const main = document.querySelector('.main')
-         const wrappe = document.createElement('div')
-         wrappe.classList.add('card')
-       
-         wrappe.innerHTML =`
+        const wrappe = document.createElement('div')
+        wrappe.classList.add('card')
+
+        wrappe.innerHTML = `
          <div class="card__image">
          <img src=${data.image} alt="">
      </div>
@@ -23,15 +23,15 @@ class Model  {
      
      <div class="card__bay">
          <div class="card__bay__price">${data.price}$</div>
-          <button ${checked?'style="background-image: url('+ './images/cartOK.svg'+')"':''} value="${data.id}"  class="card__bay__btncart" id="search-button">
+          <button ${checked ? 'style="background-image: url(' + './images/cartOK.svg' + ')"' : ''} value="${data.id}"  class="card__bay__btncart" id="search-button">
           </button>
      </div>    
        <button class="card__edit" src='./images/edit.svg' value="${data.id}" />
          `
-       main.appendChild(wrappe)
-       
-       }
-   
+        main.appendChild(wrappe)
+
+    }
+
 }
 
 // <img src="./images/cart2.svg"/>``    
