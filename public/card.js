@@ -104,7 +104,7 @@ class Controler extends Model {
   //Sort products with delay 1sec.
   async sortCards(value) {
     document.getElementById("overlay").style.display = "block";
-    setTimeout(() => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
       document.querySelector('.main').innerHTML = ''
       if (value === 'rating') {
         this.data.sort((a, b) => b.rating.rate - a.rating.rate)
@@ -119,7 +119,7 @@ class Controler extends Model {
         this.data.sort((a, b) => a.id - b.id)
         this.makeCards()
       }
-    }, 1000)
+   
   }
 }
 
