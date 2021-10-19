@@ -1,11 +1,18 @@
 class Model {
     constructor() {
+        this.main =  document.querySelector('.main')
+    }
 
+    errorInfo(){
+        
+        document.getElementById("overlay").style.display = "none"
+       
+       this.main.innerHTML = '<h1>Something<h1>went</h1><h1>wrong</h1>'
 
     }
     render(data, checked) {
 
-        const main = document.querySelector('.main')
+        
         const wrappe = document.createElement('div')
         wrappe.classList.add('card')
 
@@ -28,7 +35,7 @@ class Model {
      </div>    
        <button class="card__edit" src='./images/edit.svg' value="${data.id}" />
          `
-        main.appendChild(wrappe)
+        this.main.appendChild(wrappe)
 
     }
 

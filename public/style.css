@@ -1,5 +1,5 @@
-@import url('http://fonts.cdnfonts.com/css/nexa-rust-extras');
-@import url('http://fonts.cdnfonts.com/css/overpass-mono');
+@import url('https://fonts.cdnfonts.com/css/nexa-rust-extras');
+@import url('https://fonts.cdnfonts.com/css/overpass-mono');
 *{
     margin: 0;
     box-sizing: border-box;
@@ -87,7 +87,7 @@
     appearance: none;
     margin: 20px;
     margin-right: 100px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%233e77aa' viewBox='0 0 13 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.5 7a.956.956 0 01-.657-.256l-5.57-5.25a.839.839 0 010-1.237.968.968 0 011.312 0L6.5 4.888 11.415.257a.968.968 0 011.313 0 .839.839 0 010 1.237l-5.572 5.25A.956.956 0 016.5 7z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%233e77aa' viewBox='0 0 13 7' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.5 7a.956.956 0 01-.657-.256l-5.57-5.25a.839.839 0 010-1.237.968.968 0 011.312 0L6.5 4.888 11.415.257a.968.968 0 011.313 0 .839.839 0 010 1.237l-5.572 5.25A.956.956 0 016.5 7z'/%3E%3C/svg%3E");
     background-size: 14px 9px;
     background-repeat: no-repeat, repeat;
     background-position: right 12px center;

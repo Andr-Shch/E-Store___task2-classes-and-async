@@ -8,16 +8,20 @@ class Controler extends Model {
     this.data = []
     this.chosenItems = []
   }
-
+  //load product list
   async getProductsByAPI(url) {
+     try{
     document.getElementById("overlay").style.display = "block"
     let response = await fetch(url);
     let data = await response.json();
     if (!data) {
-      throw new ErrorHendler("OOOOPS");
+      throw new Error();
     }
     this.data = data
     this.makeCards()
+   } catch (e){
+    super.errorInfo() 
+   }
   }
 
 
